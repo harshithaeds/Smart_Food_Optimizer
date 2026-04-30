@@ -1,132 +1,100 @@
-# Smart Food & Budget Optimizer Simulation
+# 🍔 Smart Food & Budget Optimizer
 
-## Description
+A Python-based simulation that helps users select the best combination of food items within a given budget using optimization algorithms.
 
-This is a Python simulation project that suggests the best food items a user can buy within a given budget.
+---
+
+## 📖 Project Overview
+
+This project solves a real-world **budget optimization problem** using:
+
+- Greedy Algorithm  
+- Dynamic Programming (0/1 Knapsack)  
 
 Each food item has:
+- Price (cost)  
+- Value rating (benefit)  
 
-- Name
-- Price
-- Value rating
+The goal is to **maximize value within a limited budget**.
 
-The simulation compares two algorithms:
+---
 
-- Greedy Algorithm
-- Dynamic Programming using 0/1 Knapsack
+## 🎯 Objective
 
-## Project Structure
+- Compare Greedy vs Dynamic Programming  
+- Demonstrate real-world application of algorithms  
+- Provide optimal and approximate solutions  
 
-```text
+---
+
+## 🧠 Algorithms Used
+
+### 🔹 Greedy Algorithm
+- Selects items based on **value/price ratio**  
+- Time Complexity: `O(n log n)`  
+- Fast but **not always optimal**  
+
+### 🔹 Dynamic Programming (0/1 Knapsack)
+- Guarantees **optimal solution**  
+- Time Complexity: `O(n × B)`  
+- Uses DP table approach  
+
+---
+
+## 📂 Project Structure
 SmartFoodOptimizer/
 ├── main.py
 ├── data.txt
 └── README.md
-```
 
-## Algorithms Used
+---
 
-### Greedy Algorithm
-
-The greedy algorithm sorts food items by value-to-price ratio in descending order. It selects the best ratio items first until the budget is exhausted.
-
-Time Complexity: `O(n log n)`
-
-This approach is fast, but it does not always guarantee the best possible result.
-
-### Dynamic Programming
-
-The dynamic programming approach uses the 0/1 Knapsack method. It builds a 2D table to find the maximum possible value within the budget.
-
-Time Complexity: `O(n * budget)`
-
-Space Complexity: `O(n * budget)`
-
-This approach gives the optimal result.
-
-## Input Format
-
-The `data.txt` file contains one food item per line:
-
-```text
-name price value
-```
-
-Example:
-
-```text
+## 📊 Sample Input
 Pizza 120 8
 Burger 80 6
 Fries 50 5
-```
 
-## How To Run
+---
 
-Open PowerShell or Command Prompt in the project folder:
+## ▶️ How to Run
 
-```powershell
-cd C:\Users\sirig\Desktop\coding\SmartFoodOptimizer
-```
-
-Run:
-
-```powershell
+```bash
+cd SmartFoodOptimizer
 python main.py
-```
+ 
+📈 Sample Output
 
-If `python` does not work, try:
+Budget = 160
 
-```powershell
-py main.py
-```
+Algorithm	Items Selected	        Cost	Value
+Greedy	     Fries, Salad, Coffee	 150	  13
+DP	         Burger, Fries, Coffee	 160	  13
 
-## Sample Output
+⚖️ Comparison
+Feature	      Greedy	Dynamic Programming
+Speed	        Fast	      Slower
+Optimal	       ❌ No	        ✅ Yes
 
-```text
-=============================================
- Smart Food & Budget Optimizer Simulation
-=============================================
+⚠️ Edge Cases Handled
+Budget = 0
+Negative input
+Invalid data
+Empty dataset
+All items exceed budget
 
-Available Food Items
-----------------------------------------
-Name           Price     Value
-----------------------------------------
-Pizza          120       8
-Burger         80        6
-Fries          50        5
-Pasta          100       7
-Sandwich       60        4
-Juice          40        3
-Salad          70        6
-Tacos          90        7
-Noodles        110       8
-Coffee         30        2
+🏁 Conclusion
+Dynamic Programming gives optimal results
+Greedy provides fast approximation
+Both are useful depending on the scenario
 
-Enter your budget: 160
+🚀 Future Enhancements
+GUI (Tkinter / Web)
+Database integration
+Real-time recommendations
+Multiple quantity support
 
-Greedy Result
--------------
-Items       : Fries, Salad, Coffee
-Total Cost  : 150
-Total Value : 13
+📄 Detailed Report
 
-Dynamic Programming Result
---------------------------
-Items       : Burger, Fries, Coffee
-Total Cost  : 160
-Total Value : 13
+Full project report available here:
+[View Report](./SmartFoodOptimizer_Report.docx)
 
-Comparison
-----------
-Both algorithms give the same total value.
-Greedy reaches that value with lower cost.
-```
-
-## Edge Cases Handled
-
-- Budget is `0`
-- Negative budget
-- Invalid budget input
-- Empty `data.txt`
-- Invalid lines in `data.txt`
-- All items exceed the budget
