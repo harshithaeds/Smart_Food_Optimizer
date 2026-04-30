@@ -1,0 +1,11 @@
+Pizza 120 8
+Burger 80 6
+Fries 50 5
+Pasta 100 7
+Sandwich 60 4
+Juice 40 3
+Salad 70 6
+Tacos 90 7
+Noodles 110 8
+Coffee 30 2
+
