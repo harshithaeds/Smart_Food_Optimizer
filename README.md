@@ -7,7 +7,7 @@ A Python simulation project that recommends the best food items to purchase with
 ## 📄 Report
 
 A full technical report for this project is available here:
-**[SmartFoodOptimizer_Report.docx](./SmartFoodOptimizer_Report.docx)**
+**[📥 Download Technical Report (DOCX)](./SmartFoodOptimizer_Report.docx)**
 
 The report covers problem formulation, algorithm design, complexity analysis, edge case handling, sample outputs, and conclusions.
 
